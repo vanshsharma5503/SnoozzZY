@@ -210,6 +210,25 @@ struct HealthMetricView: View {
     HomeView()
 }
 
+import SwiftUI
+import HealthKit
+
+// Custom DatePicker with white text color
+struct CustomWheelDatePicker: UIViewRepresentable {
+    @Binding var date: Date
+    
+    func makeUIView(context: Context) -> UIDatePicker {
+        let picker = UIDatePicker()
+        picker.datePickerMode = .time
+        picker.preferredDatePickerStyle = .wheels
+        picker.setValue(UIColor.white, forKey: "textColor")  // Change the text color to white
+        return picker
+    }
+    
+    func updateUIView(_ uiView: UIDatePicker, context: Context) {
+        uiView.date = date
+    }
+}
 
 struct SleepDiaryView: View {
     @ObservedObject var store: SleepDiaryStore
@@ -257,9 +276,8 @@ struct SleepDiaryView: View {
 
                     // Conditional Sleep Time Picker
                     if showSleepTimePicker {
-                        DatePicker("", selection: $sleepTime, displayedComponents: .hourAndMinute)
-                            .datePickerStyle(WheelDatePickerStyle())
-                            .labelsHidden()
+                        CustomWheelDatePicker(date: $sleepTime) // Custom picker with white text
+                            .frame(height: 150)
                             .padding(.horizontal)
                     }
 
@@ -280,9 +298,8 @@ struct SleepDiaryView: View {
 
                     // Conditional Wake Time Picker
                     if showWakeTimePicker {
-                        DatePicker("", selection: $wakeTime, displayedComponents: .hourAndMinute)
-                            .datePickerStyle(WheelDatePickerStyle())
-                            .labelsHidden()
+                        CustomWheelDatePicker(date: $wakeTime) // Custom picker with white text
+                            .frame(height: 150)
                             .padding(.horizontal)
                     }
 
@@ -359,6 +376,10 @@ struct SleepDiaryView: View {
         
         store.addEntry(sleepTime: sleepTime, wakeTime: wakeTime, mood: moodText, sleepQuality: sleepQuality, interruptions: interruptions)
     }
+}
+
+#Preview {
+    SleepDiaryView(store: SleepDiaryStore()) // Provide a sample store for preview
 }
 
 
