@@ -36,7 +36,7 @@ struct ContentView: View {
             CustomTabBar(selectedTab: $selectedTab)
                 .padding(.bottom, 20) // Adjust padding as needed
                 .shadow(radius: 10) // Add shadow for floating effect
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

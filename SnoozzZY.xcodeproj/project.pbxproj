@@ -20,6 +20,7 @@
 		2D9C2E002C95F07200BAC2D3 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C2DFF2C95F07200BAC2D3 /* Timer.swift */; };
 		2D9C2E022C96597A00BAC2D3 /* AlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C2E012C96597A00BAC2D3 /* AlarmView.swift */; };
 		2D9C2E042C96B7C100BAC2D3 /* HomeVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C2E032C96B7C000BAC2D3 /* HomeVIew.swift */; };
+		2D9C2E062C96FF1700BAC2D3 /* OnboaringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C2E052C96FF1700BAC2D3 /* OnboaringView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2D9C2DFF2C95F07200BAC2D3 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		2D9C2E012C96597A00BAC2D3 /* AlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmView.swift; sourceTree = "<group>"; };
 		2D9C2E032C96B7C000BAC2D3 /* HomeVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIew.swift; sourceTree = "<group>"; };
+		2D9C2E052C96FF1700BAC2D3 /* OnboaringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				2D9C2DFD2C95F00E00BAC2D3 /* ExerciseTimerVIew.swift */,
 				2D9C2E012C96597A00BAC2D3 /* AlarmView.swift */,
 				2D9C2E032C96B7C000BAC2D3 /* HomeVIew.swift */,
+				2D9C2E052C96FF1700BAC2D3 /* OnboaringView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				2D9C2DFA2C95D57F00BAC2D3 /* Background.swift in Sources */,
 				2D9C2E042C96B7C100BAC2D3 /* HomeVIew.swift in Sources */,
 				2D9C2E022C96597A00BAC2D3 /* AlarmView.swift in Sources */,
+				2D9C2E062C96FF1700BAC2D3 /* OnboaringView.swift in Sources */,
 				2D9C2DFC2C95EFE600BAC2D3 /* ExerciseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
